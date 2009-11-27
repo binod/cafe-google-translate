@@ -1,0 +1,3 @@
+Maven command to create the project:
+
+mvn archetype:create -DarchetypeGroupId=org.glassfish.cafe.archetypes -DarchetypeArtifactId=cafe-archetype -DarchetypeVersion=1.0-SNAPSHOT -DremoteRepositories=http://download.java.net/maven/2 -DgroupId=my.test -DartifactId=gtranslatedemo -Dversion=0.1-SNAPSHOT
