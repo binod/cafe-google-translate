@@ -1,3 +1,13 @@
-Maven command to create the project:
+Notes on the Project 
+--------------------
+Maven command I used to create the project:
 
 mvn archetype:create -DarchetypeGroupId=org.glassfish.cafe.archetypes -DarchetypeArtifactId=cafe-archetype -DarchetypeVersion=1.0-SNAPSHOT -DremoteRepositories=http://download.java.net/maven/2 -DgroupId=my.test -DartifactId=gtranslatedemo -Dversion=0.1-SNAPSHOT
+
+Building the sample.
+--------------------
+There is a shell script in the project directory called "build". Just execute that.
+You need maven 2 and curl in the path.
+
+The build produces cafe-google-translate/gtranslatedemo/target/gtranslatedemo.war, which
+can be deployed to sailfin (where sailfin cafe is installed).
