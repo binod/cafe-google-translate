@@ -1,0 +1,8 @@
+curl http://google-api-translate-java.googlecode.com/files/google-api-translate-java-0.91.jar > google-api-translate-java-0.91.jar
+mvn install:install-file -Dfile=google-api-translate-java-0.91.jar \
+                       -DgroupId=com.google.translate \
+                       -DartifactId=google-api-translate-java \
+                       -Dversion=0.91 \
+                       -Dpackaging=jar \
+                       -DgeneratePom=false
+mvn clean install

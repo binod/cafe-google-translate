@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CAFE with Google Translate Demo</title>
+
+<script>
+            var xmlhttp;            
+
+            function createXmlHttpRequest() {
+                if (window.XMLHttpRequest) {
+                    xmlhttp = new XMLHttpRequest();
+                } else if (window.ActiveXObject) {
+                    try {
+                        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch(e) {
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                }
+            }
+
+            function sendToServer(url, callback) {
+                createXmlHttpRequest();
+                xmlhttp.onreadystatechange = callback;
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send(null);
+            }            
+
+            function sendIt() {
+                var from = document.getElementById("userName").value;
+                var language = document.getElementById("language").value;
+                var url =
+                "ExampleServlet?user=" + from + "&" + "language=" + language;                
+                var callback = function() {};
+                sendToServer(url, callback);
+            }
+        </script>
+</head>
+
+<body>
+
+<b>CAFE with Google Translate Demo</b>
+<hr>
+<br>
+<br>
+
+Username:<input type="text" name="userName" id="userName" value="" />
+Language:<input type="text" name="language" id="language" value="en" />
+<input type="submit" value="Submit" onclick="sendIt()"/>
+ </body>
+</html>
