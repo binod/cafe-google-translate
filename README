@@ -11,3 +11,12 @@ You need maven 2 and curl in the path.
 
 The build produces cafe-google-translate/gtranslatedemo/target/gtranslatedemo.war, which
 can be deployed to sailfin (where sailfin cafe is installed).
+
+Running the demo.
+----------------
+
+1. Run the web application in a browser http://localhost:8080/cafe-app/.
+   You can set the language of the user in this application.
+
+2. Use SIP Softphones to send and receive messages. The SIP user will receive
+   the messages in the language set.
